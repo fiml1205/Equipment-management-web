@@ -1,0 +1,121 @@
+html {
+    background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2020/01/background-powerpoint-dep.jpg);
+    background-size: cover;
+}
+
+/* Auth-form */
+.auth-form {
+    width: 500px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10%;
+}
+
+.auth-form__header {
+    padding: 7% 0 4% 35%;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #f53e2d;
+    margin: 0;
+}
+
+.auth-form__input {
+    width: 90%;
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 5%;
+    padding: 0 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    outline: none;
+}
+
+.auth-form__input:focus {
+    border-color: #777;
+}
+
+.auth-form__control {
+    margin: 5% 0 0 32%;
+}
+
+.btn.btn-primary {
+    color: white;
+    background-color: #f53e2d;
+    width: 200px;
+}
+
+.btn-primary:hover {
+    background-color: #ee594b;
+}
+
+.auth-form__option {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(51 51 129);
+    font-size: 1.2rem;
+    margin: 0 6%;
+}
+
+.forgot-password, .login-sms {
+    cursor: pointer;
+}
+
+.auth-form__social {
+    background-color: #f3f1f1;
+    padding: 12px 32px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-icon {
+    height: 30px;
+    font-size: 1.4rem;
+    width: 200px;
+}
+
+.btn-fb {
+    background-color: #3a5a98;
+    color: white;
+}
+
+.space {
+    margin-right: 15px;
+}
+
+.btn-gg {
+    background-color: white;
+    color: #3a5a98;
+}
+
+.gg-logo {
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+.auth-form__register {
+    display: flex;
+    font-size: 1.3rem;
+    margin: 1% 26%;
+}
+
+.register {
+    color: #f53e2d;
+    cursor: pointer;
+}
+
+.introduction {
+    color: #918b8b;
+}
+
+/* add text notice JS when wrong account */
+.notice {
+    font-size: 1.5rem;
+    margin: 2% 0 0 35%;
+    color: red;
+}
