@@ -42,11 +42,11 @@ html {
   margin: 5% 0 0 32%;
 }
 
-.btn-primary {
+.btn.btn-primary {
   color: white;
-  margin: 5% 0 3% 32%;
   background-color: #f53e2d;
   width: 200px;
+  margin: 5% 0 3% 32%;
 }
 
 .btn-primary:hover {
@@ -103,7 +103,7 @@ html {
 .auth-form__register {
   display: flex;
   font-size: 1.3rem;
-  margin: 1% 26%;
+  margin: 1% 31%;
 }
 
 .register {

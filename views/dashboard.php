@@ -1,12 +1,10 @@
 <?php
-require '../model/database/ConnectDb.php';
-
-$sql = "SELECT * FROM `devices`";
-$result = mysqli_query($conn, $sql);
+include('../controller/DashboardController.php')
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +14,10 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="/assets/css/dashboard.css">
     <link rel="stylesheet" href="/assets/css/responDashboard.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <body>
     <div class="wrap">
         <div class="col-25">
@@ -43,7 +43,7 @@ $result = mysqli_query($conn, $sql);
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-item__link">
+                        <a href="http://localhost/views/setAdmin.php" class="menu-item__link">
                             <i class="fa-solid fa-gear"></i>
                             Settings
                         </a>
@@ -51,7 +51,7 @@ $result = mysqli_query($conn, $sql);
                 </ul>
             </nav>
         </div>
-        
+
         <div class="col-75">
             <div class="container">
                 <div class="heading">
@@ -62,12 +62,12 @@ $result = mysqli_query($conn, $sql);
                 </div>
 
                 <!-- table -->
-                <div class="container-table" >
+                <div class="container-table">
                     <table class="container-table__detail">
                         <thead>
                             <tr>
                                 <th style="text-align: left;">Devices</th>
-                                <th >MAC Address</th>
+                                <th>MAC Address</th>
                                 <th>IP</th>
                                 <th>Create Date</th>
                                 <th class="table-foot">Power Consumption (Kw/h)</th>
@@ -75,27 +75,37 @@ $result = mysqli_query($conn, $sql);
                         </thead>
                         <tbody id="database">
                             <?php
-                                if(mysqli_num_rows($result)>0) {
-                                    while($row=mysqli_fetch_assoc($result)) {
-                                        ?>
-                                            <tr>
-                                                <td><?php echo $row['device'] ?></td>
-                                                <td class="table-body"><?php echo $row['mac'] ?></td>
-                                                <td class="table-body"><?php echo $row['ip'] ?></td>
-                                                <td class="table-body"><?php echo $row['createdate'] ?></td>
-                                                <td class="table-foot"><?php echo $row['power'] ?></td>
-                                            </tr>
-                                        <?php     
-                                    }
-                                }
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
                             ?>
+                            <tr>
+                                <td>
+                                    <?php echo $row['device'] ?>
+                                </td>
+                                <td class="table-body">
+                                    <?php echo $row['mac'] ?>
+                                </td>
+                                <td class="table-body">
+                                    <?php echo $row['ip'] ?>
+                                </td>
+                                <td class="table-body">
+                                    <?php echo $row['createdate'] ?>
+                                </td>
+                                <td class="table-foot">
+                                    <?php echo $row['power'] ?>
+                                </td>
+                            </tr>
+                            <?php
+                                }
+                            }
+                                        ?>
                         </tbody>
                         <tfoot>
                             <tr style="background-color: #f1eeee;">
-                                <td colspan="4" >Total</td>                    
+                                <td colspan="4">Total</td>
                                 <td class="table-foot">20</td>
                             </tr>
-                        </tfoot>        
+                        </tfoot>
                     </table>
                 </div>
                 <!-- chart and form -->
@@ -106,9 +116,9 @@ $result = mysqli_query($conn, $sql);
 
                     <div class="container-handle__form">
                         <form action="../model/database/Dashboard/DashboardDb.php" method="post">
-                            <input type="text" class="take-data" placeholder="name" id="name" name="namedevice">
+                            <input type="text" class="take-data" placeholder="name" name="namedevice">
                             <br>
-                            <input type="text" class="take-data" placeholder="IP" id="ip" name="ip">
+                            <input type="text" class="take-data" placeholder="IP" name="ip">
                             <br>
                             <h3 class="notice-validate"></h3>
                             <br>
@@ -133,29 +143,73 @@ $result = mysqli_query($conn, $sql);
                 <nav class="menu-detail">
                     <ul class="menu-list">
                         <li class="menu-item">
-                            <a href="" class="menu-item__link">
+                            <a href="http://localhost/views/dashboard.php" class="menu-item__link">
                                 <i class="fa-solid fa-table-columns"></i>
                                 Dashboard
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="http://127.0.0.1:5500/views/logs.html" class="menu-item__link">
+                            <a href="http://localhost/views/logs.php" class="menu-item__link">
                                 <i class="fa-solid fa-clock"></i>
                                 Logs
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="menu-item__link">
+                            <a href="http://localhost/views/setAdmin.php" class="menu-item__link">
                                 <i class="fa-solid fa-gear"></i>
                                 Settings
                             </a>
                         </li>
                     </ul>
                 </nav>
-            </div>  
+            </div>
         </div>
     </div>
-     
-    <script src="/controllers/dashboard.js"></script>
+
+    <!-- add chart -->
+    <script>
+        var xValues = <?php echo json_encode($valuex); ?>;
+        var yValues = <?php echo json_encode($valuey); ?>;
+        // add color for device in chart      
+        var barColors = [
+            "#b91d47", "#333",
+            "#00aba9", "#21d358",
+            "#2b5797", "yellow",
+            "#e8c3b9", "pink"
+        ];
+        // create chart
+        new Chart("myChart", {
+            type: "doughnut",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Power Consumption (Kw/h)"
+                },
+                aspectRatio: 1
+            }
+        });
+    </script>
+    <!-- handle responsive -->
+    <script>
+        var listenShow = document.querySelector('.menu-responsive__show')
+        var showResponsive = document.querySelector('.menu-responsive')
+
+        listenShow.onclick = function () {
+            showResponsive.style.display = 'block'
+        }
+
+        var listenClose = document.querySelector('.container')
+        listenClose.onclick = function () {
+            showResponsive.style.display = 'none'
+        }
+    </script>
 </body>
+
 </html>

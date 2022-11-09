@@ -1,33 +1,33 @@
 * {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    line-height: 1.6rem;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .btn {
-    min-width: 100px;
-    height: 35px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  min-width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

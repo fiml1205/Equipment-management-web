@@ -1,0 +1,147 @@
+.wrap {
+  display: flex;
+}
+/* column 15 */
+.col-25 {
+  width: 20%;
+  height: 100%;
+  margin-left: 0px;
+}
+
+.menu-title {
+  display: flex;
+}
+
+.menu-title__icon {
+  font-size: 2.6rem;
+  margin: 18px 10px 10px 35px;
+}
+
+.menu-title__heading {
+  font-size: 2rem;
+  margin: 23px 0 10px 0;
+}
+
+.solid {
+  border-bottom: 1px solid #dfdddd;
+}
+
+.menu-detail {
+}
+
+.menu-list {
+  margin-top: 30px;
+  font-size: 1.8rem;
+}
+
+.menu-item {
+  padding-bottom: 25px;
+}
+
+.menu-item__link {
+  color: black;
+}
+
+.menu-item__link:hover {
+  font-size: 2rem;
+  color: rgb(66, 66, 201);
+  right: -4px;
+  transition: 0.2s;
+}
+
+/* column 75 */
+.col-75 {
+  width: 80%;
+  background-color: #f5f4f4;
+}
+.wrap-75 {
+  height: 123%;
+  position: relative;
+  background-color: #f5f4f4;
+  border: 1px solid #dfdddd;
+}
+
+/* heading */
+.heading {
+  height: 64px;
+  background-color: white;
+  display: flex;
+  font-size: 2rem;
+}
+
+.heading-icon {
+  position: relative;
+  margin-left: 85%;
+  margin-top: 15px;
+  margin-right: 10px;
+  font-size: 2.2rem;
+  background-color: black;
+  width: 33px;
+  height: 33px;
+  border-radius: 20px;
+}
+
+.icon-handle {
+  position: absolute;
+  color: white;
+  top: 5px;
+  left: 6px;
+}
+
+.container-detail {
+  background-size: cover;
+  background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2020/01/background-powerpoint-dep.jpg);
+  position: relative;
+  width: 1476px;
+  height: 912px;
+}
+
+.form-admin {
+  position: absolute;
+  top: 9%;
+  left: 32%;
+  width: 500px;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10%;
+}
+
+.form-admin__heading {
+  color: #f53e2d;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.auth-form__input {
+  width: 90%;
+  height: 40px;
+  margin-top: 16px;
+  margin-bottom: 3%;
+  margin-left: 5%;
+  padding: 0 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  outline: none;
+}
+
+.notice-file {
+  font-size: 1.2rem;
+  margin-left: 28px;
+}
+
+.btn-file {
+  margin-left: 28px;
+}
+
+.btn-primary {
+  color: white;
+  margin: 5% 0 3% 32%;
+  background-color: #f53e2d;
+  width: 200px;
+}
+
+.btn-primary:hover {
+  background-color: #ee594b;
+}
