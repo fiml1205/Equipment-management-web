@@ -3,8 +3,9 @@
 // take DB from MySql
 require '../model/database/ConnectDb.php';
 
-$sql = "SELECT * FROM `logs`";
+$sql = "SELECT * FROM `logsdevice`";
 $result = mysqli_query($conn, $sql);
+
 
 $option = null;
 // selection num of pagination
@@ -23,6 +24,6 @@ if(!$option == ''){
 $page = ceil($total / $limit);
 $currentPage = (isset($_GET['page']) ? $_GET['page'] : 1);
 $start = ($currentPage - 1) * $limit;
-$result = mysqli_query($conn, "SELECT * FROM `logs` LIMIT $start, $limit");
+$result = mysqli_query($conn, "SELECT * FROM `logsdevice` LIMIT $start, $limit");
 
 ?>

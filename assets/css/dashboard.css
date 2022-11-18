@@ -14,12 +14,12 @@
 
 .menu-title__icon {
   font-size: 2.6rem;
-  margin: 18px 10px 10px 35px;
+  margin: 18px 10px 5px 35px;
 }
 
 .menu-title__heading {
-  font-size: 2rem;
-  margin: 23px 0 10px 0;
+  font-size: 1.8rem;
+  margin: 23px 0 5px 0;
 }
 
 .solid {
@@ -30,8 +30,8 @@
 }
 
 .menu-list {
-  margin-top: 30px;
-  font-size: 1.8rem;
+  margin-top: 20px;
+  font-size: 1.65rem;
 }
 
 .menu-item {
@@ -56,18 +56,18 @@
 
 .heading {
   background-color: white;
-  height: 64px;
+  height: 57.5px;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-left: 1px solid #f7f7f7;
 }
 
 .heading-icon {
   position: relative;
-  margin-left: 85%;
+  margin-left: 80%;
   margin-top: 15px;
   margin-right: 10px;
-  font-size: 2.2rem;
+  font-size: 2rem;
   background-color: black;
   width: 33px;
   height: 33px;
@@ -78,7 +78,7 @@
   position: absolute;
   color: white;
   top: 5px;
-  left: 6px;
+  left: 8px;
 }
 
 .container {
@@ -90,13 +90,13 @@
 
 .container-table {
   width: 90%;
-  padding: 3% 0 0 10%;
+  padding: 2% 0 0 10%;
 }
 
 .container-table__detail {
   border: 1px solid #b7a5a5;
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background-color: white;
 }
 
@@ -109,7 +109,7 @@ th {
 
 td,
 th {
-  padding: 20px;
+  padding: 10px;
 }
 
 .table-head {
@@ -125,32 +125,32 @@ th {
 
 .container-handle {
   display: flex;
-  margin-left: 147px;
+  margin-left: 75px;
   margin-top: 40px;
 }
 
 .container-handle__chart {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background-color: white;
   margin-right: 50px;
   margin-left: 10%;
 }
 
+.chart-handle {
+width: 100%;
+height: 100%;
+}
+
 .container-handle__form {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background-color: white;
 }
 
-.chart-handle {
-  width: 100%;
-  height: 100%;
-}
-
 .take-data {
-  margin-left: 67px;
-  width: 370px;
+  margin-left: 38px;
+  width: 320px;
   height: 55px;
   margin-top: 50px;
   background-color: #f5f4f4;
@@ -160,7 +160,7 @@ th {
 
 .btn-device {
   background-color: #f53e2d;
-  margin-left: 192px;
+  margin-left: 140px;
   border-radius: 5px;
   width: 130px;
   height: 40px;

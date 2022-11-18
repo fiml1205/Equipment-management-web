@@ -1,7 +1,7 @@
 <?php
 include('../controller/LogsController.php')
 
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +13,7 @@ include('../controller/LogsController.php')
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/logs.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -60,9 +58,9 @@ include('../controller/LogsController.php')
                     <h3 class="heading-title">Welcome John</h3>
                 </div>
                 <div class="container-heading">
-                    <h3 class="container-heading__text" style="margin-right: 665px;">Action Logs</h3>
-                    <h3 style="font-size: 1.4rem; margin-top:55px;">Choose pages to show</h3>
-                    <form action="" method="post" style="margin:46px 50px 0 10px;">
+                    <h3 class="container-heading__text">Action Logs</h3>
+                    <h3 style="font-size: 1.6rem; margin-top:24px;">Choose pages to show</h3>
+                    <form action="" method="post" style="margin:18px 50px 0 10px;">
                         <select name="option" style="width: 60px;height:30px;">
                             <option value="">Page</option>
                             <option value="3">3</option>
@@ -73,10 +71,8 @@ include('../controller/LogsController.php')
                         <input type="submit" value="OK" name="btn-option" style="height:30px">
                     </form>
                     <form action="" method="POST">
-                        <input type="text" class="container-heading__input" id="search" placeholder="search by name"
-                            name="txtsearch">
-                        <input type="text" value="Search" class="btn"
-                            style="background-color: #f53e2d;color:white;width:35px">
+                        <input type="text" class="container-heading__input" id="search" placeholder="search by name" name="txtsearch">
+                        <input type="text" value="Search" class="btn" style="background-color: #f53e2d;color:white;width:35px">
                     </form>
                 </div>
 
@@ -95,20 +91,21 @@ include('../controller/LogsController.php')
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                             ?>
-                            <tr>
-                                <td>
-                                    <?php echo $row['id'] ?>
-                                </td>
-                                <td class="table-body">
-                                    <?php echo $row['device'] ?>
-                                </td>
-                                <td class="table-body">
-                                    <?php echo $row['action'] ?>
-                                </td>
-                                <td class="table-foot">
-                                    <?php echo $row['createdate'] ?>
-                                </td>
-                            </tr>
+                                    <tr>
+                                        <td>
+                                            <?php echo $row['deviceid'] ?>
+                                        </td>
+                                        <td class="table-body">
+                                            <?php echo $row['device'] ?>
+                                        </td>
+                                        <td class="table-body">
+                                            <?php echo $row['action'] ?>
+                                        </td>
+                                        <td class="table-foot">
+                                            <?php echo $row['date'] ?>
+                                        </td>
+                                    </tr>
+                                    
                             <?php
                                 }
                             }
@@ -118,37 +115,34 @@ include('../controller/LogsController.php')
                             <td>Total</td>
                             <td></td>
                             <td></td>
-                            <td class="table-foot">255</td>
+                            <td class="table-foot"><?php echo ($total).' Devices'; ?></td>
                         </tfoot>
                     </table>
                 </div>
-                <div class="pagination-wrap" style="top: 932px;">
+                <div class="pagination-wrap">
                     <ul class="pagination">
                         <?php if ($currentPage - 1 > 0) { ?>
-                        <button class="direction">
-                            <a href="logs.php?page=<?php echo $currentPage - 1 ?>"
-                                style="height: 31px;padding-top: 3px">
-                                <i class="fa-solid fa-backward"></i>
-                            </a>
-                        </button>
+                            <button class="direction">
+                                <a href="logs.php?page=<?php echo $currentPage - 1 ?>" style="height: 31px;padding-top: 7px">
+                                    <i class="fa-solid fa-backward"></i>
+                                </a>
+                            </button>
                         <?php
                         } ?>
 
                         <?php for ($i = 1; $i <= $page; $i++) { ?>
-                        <li class="<?php echo (($currentPage == $i) ? 'active' : '') ?> pagination-li"><a
-                                href="logs.php?page=<?php echo $i ?>">
-                                <?php echo $i ?>
-                            </a></li>
+                            <li class="<?php (($currentPage == $i) ? 'active' : '') ?> pagination-li"><a href="logs.php?page=<?php echo $i ?>">
+                                    <?php echo $i ?>
+                                </a></li>
                         <?php
                         }
                         ?>
                         <?php if ($currentPage + 1 <= $page) { ?>
-                        <button class="direction">
-                            <a href="logs.php?page=<?php echo $currentPage + 1 ?>"
-                                style="height: 31px;padding-top: 3px">
-                                <i class="fa-solid fa-forward"></i>
-                            </a>
-                        </button>
+                            <button class="direction">
+                                <a href="logs.php?page=<?php echo $currentPage + 1 ?>" style="height: 31px;padding-top: 7px">
+                                    <i class="fa-solid fa-forward"></i>
+                                </a>
+                            </button>
                         <?php
                         } ?>
                     </ul>

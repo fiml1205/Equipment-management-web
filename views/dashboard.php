@@ -14,9 +14,7 @@ include('../controller/DashboardController.php')
     <link rel="stylesheet" href="/assets/css/dashboard.css">
     <link rel="stylesheet" href="/assets/css/responDashboard.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
     <div class="wrap">
@@ -78,32 +76,32 @@ include('../controller/DashboardController.php')
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                             ?>
-                            <tr>
-                                <td>
-                                    <?php echo $row['device'] ?>
-                                </td>
-                                <td class="table-body">
-                                    <?php echo $row['mac'] ?>
-                                </td>
-                                <td class="table-body">
-                                    <?php echo $row['ip'] ?>
-                                </td>
-                                <td class="table-body">
-                                    <?php echo $row['createdate'] ?>
-                                </td>
-                                <td class="table-foot">
-                                    <?php echo $row['power'] ?>
-                                </td>
-                            </tr>
+                                    <tr>
+                                        <td>
+                                            <?php echo $row['device'] ?>
+                                        </td>
+                                        <td class="table-body">
+                                            <?php echo $row['mac'] ?>
+                                        </td>
+                                        <td class="table-body">
+                                            <?php echo $row['ip'] ?>
+                                        </td>
+                                        <td class="table-body">
+                                            <?php echo $row['createdate'] ?>
+                                        </td>
+                                        <td class="table-foot">
+                                            <?php echo $row['power'] ?>
+                                        </td>
+                                    </tr>
                             <?php
                                 }
                             }
-                                        ?>
+                            ?>
                         </tbody>
                         <tfoot>
                             <tr style="background-color: #f1eeee;">
                                 <td colspan="4">Total</td>
-                                <td class="table-foot">20</td>
+                                <td class="table-foot"><?php echo (array_reduce(($valuey), "sum"));?></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -201,12 +199,12 @@ include('../controller/DashboardController.php')
         var listenShow = document.querySelector('.menu-responsive__show')
         var showResponsive = document.querySelector('.menu-responsive')
 
-        listenShow.onclick = function () {
+        listenShow.onclick = function() {
             showResponsive.style.display = 'block'
         }
 
         var listenClose = document.querySelector('.container')
-        listenClose.onclick = function () {
+        listenClose.onclick = function() {
             showResponsive.style.display = 'none'
         }
     </script>

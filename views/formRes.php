@@ -8,9 +8,7 @@
     <title>Wellcome to SOIOT SYSTEM</title>
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/formRes.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -21,8 +19,7 @@
             </div>
             <div class="auth-form__form">
                 <form action="../model/database/UserDb/ResDb.php" method="POST">
-                    <input type="text" class="auth-form__input" placeholder="email/phone number/user name"
-                        name="username">
+                    <input type="text" class="auth-form__input" placeholder="email/phone number/user name" name="username">
                     <input type="password" class="auth-form__input" placeholder="password" name="password">
                     <button class="btn btn-primary" name="btn-res">SIGN IN</button>
                 </form>

@@ -14,24 +14,21 @@
 
 .menu-title__icon {
   font-size: 2.6rem;
-  margin: 18px 10px 10px 35px;
+  margin: 18px 10px 5px 35px;
 }
 
 .menu-title__heading {
-  font-size: 2rem;
-  margin: 23px 0 10px 0;
+  font-size: 1.8rem;
+  margin: 23px 0 5px 0;
 }
 
 .solid {
   border-bottom: 1px solid #dfdddd;
 }
 
-.menu-detail {
-}
-
 .menu-list {
-  margin-top: 30px;
-  font-size: 1.8rem;
+  margin-top: 20px;
+  font-size: 1.65rem;
 }
 
 .menu-item {
@@ -55,7 +52,7 @@
   background-color: #f5f4f4;
 }
 .wrap-75 {
-  height: 123%;
+  height: 105%;
   position: relative;
   background-color: #f5f4f4;
   border: 1px solid #dfdddd;
@@ -63,18 +60,20 @@
 
 /* heading */
 .heading {
-  height: 64px;
   background-color: white;
+  height: 57.5px;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  border-left: 1px solid #f7f7f7;
+  margin-bottom: 2px;
 }
 
 .heading-icon {
   position: relative;
-  margin-left: 85%;
+  margin-left: 80%;
   margin-top: 15px;
   margin-right: 10px;
-  font-size: 2.2rem;
+  font-size: 2rem;
   background-color: black;
   width: 33px;
   height: 33px;
@@ -85,15 +84,15 @@
   position: absolute;
   color: white;
   top: 5px;
-  left: 6px;
+  left: 8px;
 }
 
 .container-detail {
   background-size: cover;
   background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2020/01/background-powerpoint-dep.jpg);
   position: relative;
-  width: 1476px;
-  height: 912px;
+  width: 1215px;
+  height: 662px;
 }
 
 .form-admin {
