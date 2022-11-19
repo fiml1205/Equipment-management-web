@@ -63,13 +63,13 @@ require '../model/database/Dashboard/EditDevice.php';
                     <div class="option-account" id="optionAccount">
                         <ul class="option-account__ul">
                             <li class="option-account__li">
-                                <a href="" class="option-account__link">
+                                <a href="http://localhost/views/profileUser.php" class="option-account__link">
                                     <i class="fa-solid fa-address-card"></i>
                                     Profile
                                 </a>
                             </li>
                             <li class="option-account__li">
-                                <a href="" class="option-account__link">
+                                <a href="http://localhost/views/changePw.php" class="option-account__link">
                                     <i class="fa-solid fa-lock"></i>
                                     Change password
                                 </a>
@@ -129,7 +129,7 @@ require '../model/database/Dashboard/EditDevice.php';
                                 <td><input class="form-edit__input" type="text" name="power" value="<?php echo $power ?>"></td>
                             </tr>
                         </table>
-                        <button name="btn-save" class="btn-primary">Save</button>
+                        <button name="btn-save" class="btn-primary btn">Save</button>
                     </form>
                 </div>
             </div>

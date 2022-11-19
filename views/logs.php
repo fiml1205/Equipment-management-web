@@ -61,13 +61,13 @@ include('../controller/LogsController.php')
                     <div class="option-account" id="optionAccount">
                         <ul class="option-account__ul">
                             <li class="option-account__li">
-                                <a href="" class="option-account__link">
+                                <a href="http://localhost/views/profileUser.php" class="option-account__link">
                                     <i class="fa-solid fa-address-card"></i>
                                     Profile
                                 </a>
                             </li>
                             <li class="option-account__li">
-                                <a href="" class="option-account__link">
+                                <a href="http://localhost/views/changePw.php" class="option-account__link">
                                     <i class="fa-solid fa-lock"></i>
                                     Change password
                                 </a>

@@ -73,6 +73,7 @@
     width: 33px;
     height: 33px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .icon-handle {
