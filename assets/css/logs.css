@@ -67,9 +67,9 @@
   border-left: 1px solid #f7f7f7;
 }
 
-.heading-icon {
+.heading-avatar {
   position: relative;
-  margin-left: 80%;
+  margin-left: 82%;
   margin-top: 15px;
   margin-right: 10px;
   font-size: 2rem;
@@ -84,6 +84,37 @@
   color: white;
   top: 5px;
   left: 8px;
+}
+
+/* option-account */
+.option-account{
+  display: none;
+  width: 190px;
+  height: 120px;
+  background-color: white;
+  position: absolute;
+  top: 57px;
+  left: 82%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 23px 4px #a6a4a4;
+}
+
+.option-account__ul {
+  padding-left: 20px;
+}
+
+.option-account__li {
+  margin-bottom: 16px;
+}
+
+.option-account__link{
+  color: black;
+  font-weight: bold;
+}
+
+.option-account__link:hover {
+  color: #f53e2d;
+  transition: 0.2s;
 }
 
 .container-heading {

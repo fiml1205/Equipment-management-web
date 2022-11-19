@@ -49,28 +49,55 @@
         <div class="col-75">
             <div class="container">
                 <div class="heading">
-                    <div class="heading-icon">
+                    <div class="heading-avatar" id="avatar">
                         <i class="fa-solid fa-user icon-handle"></i>
                     </div>
                     <h3 class="heading-title">Welcome John</h3>
-                </div>
-                <div class="container-detail">
-                    <form action="" class="form-admin" method="post" enctype="multipart/form-data">
-                        <h1 class="form-admin__heading">Admin System</h1>
-                        <input type="password" placeholder="current password" class="auth-form__input">
-                        <br>
-                        <input type="password" placeholder="new password" class="auth-form__input">
-                        <br>
-                        <h1 class="notice-file">Upload Avatar</h1>
-                        <input type="file" class="btn-file" id="" name="file">
 
-                        <br>
-                        <input type="submit" name="" id="" class="btn btn-primary">
-                    </form>
+                    <!-- option account -->
+                    <div class="option-account" id="optionAccount">
+                        <ul class="option-account__ul">
+                            <li class="option-account__li">
+                                <a href="" class="option-account__link">
+                                    <i class="fa-solid fa-address-card"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li class="option-account__li">
+                                <a href="" class="option-account__link">
+                                    <i class="fa-solid fa-lock"></i>
+                                    Change password
+                                </a>
+                            </li>
+                            <li class="option-account__li">
+                                <a href="" class="option-account__link">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            <div class="container-detail">
+                <form action="" class="form-admin" method="post" enctype="multipart/form-data">
+                    <h1 class="form-admin__heading">Admin System</h1>
+                    <input type="password" placeholder="current password" class="auth-form__input">
+                    <br>
+                    <input type="password" placeholder="new password" class="auth-form__input">
+                    <br>
+                    <h1 class="notice-file">Upload Avatar</h1>
+                    <input type="file" class="btn-file" id="" name="file">
+
+                    <br>
+                    <input type="submit" name="" id="" class="btn btn-primary">
+                </form>
             </div>
         </div>
     </div>
+    </div>
+
+    <!-- handle option-account -->
+    <script src="/controller/BaseControl.js"></script>x
 </body>
 
 </html>

@@ -52,10 +52,33 @@ include('../controller/LogsController.php')
         <div class="col-75">
             <div class="wrap-75">
                 <div class="heading">
-                    <div class="heading-icon">
+                    <div class="heading-avatar" id="avatar">
                         <i class="fa-solid fa-user icon-handle"></i>
                     </div>
                     <h3 class="heading-title">Welcome John</h3>
+                
+                    <!-- option account -->
+                    <div class="option-account" id="optionAccount">
+                        <ul class="option-account__ul">
+                            <li class="option-account__li">
+                                <a href="" class="option-account__link">
+                                    <i class="fa-solid fa-address-card"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li class="option-account__li">
+                                <a href="" class="option-account__link">
+                                    <i class="fa-solid fa-lock"></i>
+                                    Change password
+                                </a>
+                            </li>
+                            <li class="option-account__li">
+                                <a href="" class="option-account__link">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="container-heading">
                     <h3 class="container-heading__text">Action Logs</h3>
@@ -150,6 +173,9 @@ include('../controller/LogsController.php')
             </div>
         </div>
     </div>
+
+       <!-- handle option-account -->
+       <script src="/controller/BaseControl.js"></script>
 </body>
 
 </html>
