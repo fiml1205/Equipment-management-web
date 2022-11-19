@@ -26,9 +26,6 @@
   border-bottom: 1px solid #dfdddd;
 }
 
-.menu-detail {
-}
-
 .menu-list {
   margin-top: 20px;
   font-size: 1.65rem;
@@ -112,15 +109,36 @@ th {
   padding: 10px;
 }
 
-.table-head {
-}
-
 .table-body {
   text-align: center;
 }
 
 .table-foot {
+  border-right: 1px solid;
   text-align: end;
+}
+
+.table-option {
+  width: 150px;
+  text-align: center;
+}
+
+.btn-delete, .btn-edit {
+  background-color: #f53e2d;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  width: 50px;
+  height: 22px;
+}
+
+.btn-delete:hover {
+  background-color: #ee594b;
+}
+
+.btn-edit:hover {
+  background-color: #ee594b;
 }
 
 .container-handle {

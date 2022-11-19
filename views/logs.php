@@ -72,7 +72,7 @@ include('../controller/LogsController.php')
                     </form>
                     <form action="" method="POST">
                         <input type="text" class="container-heading__input" id="search" placeholder="search by name" name="txtsearch">
-                        <input type="text" value="Search" class="btn" style="background-color: #f53e2d;color:white;width:35px">
+                        <button class="btn container-heading__search">Search</button>
                     </form>
                 </div>
 

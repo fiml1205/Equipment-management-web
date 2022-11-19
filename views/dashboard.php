@@ -69,6 +69,7 @@ include('../controller/DashboardController.php')
                                 <th>IP</th>
                                 <th>Create Date</th>
                                 <th class="table-foot">Power Consumption (Kw/h)</th>
+                                <th>Option</th>
                             </tr>
                         </thead>
                         <tbody id="database">
@@ -92,6 +93,14 @@ include('../controller/DashboardController.php')
                                         <td class="table-foot">
                                             <?php echo $row['power'] ?>
                                         </td>
+                                        <td class="table-option">
+                                            <a href="../model/database/Dashboard/DeleteDevice.php?id=<?php echo $row['deviceid']; ?>" style="">
+                                                <button onclick="return confirm('Do you really want to delete this device?')" class="btn-delete">Delete</button>
+                                            <a>
+                                            <a  href="/views/editDevice.php?id=<?php echo $row['deviceid']; ?>" style="margin-left: 10px;">
+                                                <button class="btn-edit">Edit</button>
+                                            <a>
+                                        </td>
                                     </tr>
                             <?php
                                 }
@@ -101,7 +110,9 @@ include('../controller/DashboardController.php')
                         <tfoot>
                             <tr style="background-color: #f1eeee;">
                                 <td colspan="4">Total</td>
-                                <td class="table-foot"><?php echo (array_reduce(($valuey), "sum"));?></td>
+                                <td class="table-foot">
+                                    <?php echo (array_reduce(($valuey), "sum")); ?>
+                                </td>
                             </tr>
                         </tfoot>
                     </table>
@@ -113,7 +124,7 @@ include('../controller/DashboardController.php')
                     </div>
 
                     <div class="container-handle__form">
-                        <form action="../model/database/Dashboard/DashboardDb.php" method="post">
+                        <form action="../model/database/Dashboard/AddDevice.php" method="post">
                             <input type="text" class="take-data" placeholder="name" name="namedevice">
                             <br>
                             <input type="text" class="take-data" placeholder="IP" name="ip">

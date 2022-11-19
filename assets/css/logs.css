@@ -92,7 +92,7 @@
 
 .container-heading__text {
   font-size: 2rem;
-  margin: 24px 317px 0 109px;
+  margin: 24px 324px 0 109px;
 }
 
 .container-heading__input {
@@ -108,15 +108,14 @@
 
 .container-heading__search {
   color: white;
-  margin-top: 45px;
-  background-color: rgb(255, 145, 0);
+  background-color: #f53e2d;
   border-radius: 10px;
   width: 50px;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 .container-heading__search:hover {
-  background-color: rgb(240, 133, 34);
+  background-color: #ee594b;
 }
 
 /* table */

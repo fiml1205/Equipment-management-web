@@ -15,11 +15,7 @@ if (isset($_POST['btn-submit'])) {
         VALUES('$namedevice','$mac', '$ip', '$date', '$power')";
 
         if ($conn->query($sql) === true) {
-?>
-<script>
-    window.location = 'http://localhost/views/dashboard.php'
-</script>
-<?php
+            header('location: /views/dashboard.php');
         } else {
             echo "loi {$sql}" . $conn->error;
         }
